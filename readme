@@ -1,0 +1,75 @@
+Project Title:
+    DanfishelBank
+
+
+Service Tittle:
+    Saving Account
+
+Prerequisites:
+
+
+
+
+Deployment:
+
+
+Built With :
+Flask-python
+
+Contributing
+
+Versioning
+Git
+
+Authors
+Nithin Sai - Initial work
+
+License
+This project is licensed under the DanFishel
+
+About Service:
+
+Project Title:
+    DanfishelBank
+
+
+Service Tittle:
+     Account Service
+
+
+Prerequisites:
+
+
+
+
+Deployment:
+
+
+Built With :
+Flask-python
+
+Contributing :
+
+Versioning
+Git
+
+Authors
+Nithin Sai - Initial work
+
+License
+This project is licensed under the DanFishel
+
+About Service:
+
+Creating FD(defing fd or rd  by Account type ) with maturity amount and maturity date calculation and saving that data in Transaction Table too
+Transfering Fixed deposit amount to the particular account
+Editing deposit Details by id
+Fetching All deposit Details
+Fetching All deposit Details by accno
+Deleting deposit Details by Accno(Hard delete)
+Deleting deposit Details by id(hard delete)
+
+
+
+
+

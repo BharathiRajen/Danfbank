@@ -1,0 +1,328 @@
+<div class="card">
+    <header>
+        <div class="card-header">
+    
+            <h6 class="card-title">User Role Form<button type="button" class="close" aria-label="Close"
+                    (click)="ViewDeposit()">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+            </h6>
+        </div>
+    </header>
+   
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                 <label class="required label">Bank Name</label>
+                <select class="form-control" name="bank_name_id" formControlName="bank_name_id"
+                    [ngClass]="{ 'is-invalid': submitted && f.bank_name_id.errors }" >
+                    <option value="" selected disabled hidden>Choose Your Option</option>
+                    <option value="1">Indian Bank</option>
+                    <option value="2">Axis Bank</option>
+                    <option value="3">Canara Bank</option>
+                    <option value="4">HDFC Bank</option>
+                    <option value="5">ICICI Bank</option>
+                    <option value="6">Andhra Bank</option>
+
+                </select>
+                <div *ngIf="submitted && f.bank_name_id.errors" class="invalid-feedback">
+                      <div *ngIf="f.bank_name_id.errors.required">Bank Name is required</div>
+                </div>
+            </div>
+            <div class="col">
+                <label class="required label">Branch Name</label><br>
+                <select class="form-control" name="branch_name_id" formControlName="branch_name_id"
+                        [ngClass]="{ 'is-invalid': submitted && f.branch_name_id.errors }">
+                        <option value="" selected disabled hidden>Choose Your Option</option>
+                        <option value="1">Mandaveli</option>
+                        <option value="2">Mylapore</option>
+                        <option value="3">velechery</option>
+                        <option value="4">Santhome</option>
+                        <option value="5">Adyar</option>
+                        <option value="6">kolathur</option>
+                     </select>
+                <div *ngIf="submitted && f.branch_name_id.errors" class="invalid-feedback">
+                    <div *ngIf="f.branch_name_id.errors.required">Branch Name option is required</div>
+                </div>
+            </div>
+            <div class="col">
+                <label class="required label" for="name">City Name</label>
+                <input type="text" class="form-control" id="city_name" formControlName="city_name"
+                        [ngClass]="{ 'is-invalid': submitted&&f.city_name.errors}">
+                <div *ngIf="submitted&&f.city_name.errors" class="invalid-feedback">
+                    <div>City name is required</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <form class="forms-sample" [formGroup]="depositForm">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label class="required label" for="name">Area Name</label>
+                        <input type="text" class="form-control" id="area_name" formControlName="area_name"
+                            [ngClass]="{ 'is-invalid': submitted&&f.area_name.errors}">
+                        <div *ngIf="submitted&&f.area_name.errors" class="invalid-feedback">
+                            <div>Area name is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label" for="name">Country Name</label>
+                        <input type="text" class="form-control" id="country_name" formControlName="country_name"
+                            [ngClass]="{ 'is-invalid': submitted&&f.country_name.errors}">
+                        <div *ngIf="submitted&&f.country_name.errors" class="invalid-feedback">
+                            <div>Country name is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label" for="name">Designation</label>
+                        <input type="text" class="form-control" id="designation" formControlName="designation"
+                            [ngClass]="{ 'is-invalid': submitted&&f.designation.errors}">
+                        <div *ngIf="submitted&&f.designation.errors" class="invalid-feedback">
+                            <div>Designation is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="required label" for="name">District Name</label>
+                        <input type="text" class="form-control" id="district_name" formControlName="district_name"
+                            [ngClass]="{ 'is-invalid': submitted&&f.district_name.errors}">
+                        <div *ngIf="submitted&&f.district_name.errors" class="invalid-feedback">
+                            <div>District is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label">Transaction code</label><br>
+                        <select class="form-control" name="transaction_code_id" formControlName="transaction_code_id"
+                                [ngClass]="{ 'is-invalid': submitted && f.transaction_code_id.errors }">
+                                <option value="" selected disabled hidden>Choose Your Option</option>
+                                <option value="1">121</option>
+                                <option value="2">122</option>
+                                <option value="3">123</option>
+                                <option value="4">124</option>
+                                <option value="5">125</option>
+                                <option value="6">126</option>
+                             </select>
+                        <div *ngIf="submitted && f.transaction_code_id.errors" class="invalid-feedback">
+                            <div *ngIf="f.transaction_code_id.errors.required">Transaction code option is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label">User limit code</label><br>
+                        <select class="form-control" name="userlimit_code_id" formControlName="userlimit_code_id"
+                                [ngClass]="{ 'is-invalid': submitted && f.userlimit_code_id.errors }">
+                                <option value="" selected disabled hidden>Choose Your Option</option>
+                                <option value="1">11</option>
+                                <option value="2">12</option>
+                                <option value="3">13</option>
+                                <option value="4">14</option>
+                                <option value="5">15</option>
+                                <option value="6">16</option>
+                             </select>
+                        <div *ngIf="submitted && f.userlimit_code_id.errors" class="invalid-feedback">
+                            <div *ngIf="f.userlimit_code_id.errors.required">Transaction code option is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="required label" for="name">First Name</label>
+                        <input type="text" class="form-control" id="first_name" formControlName="first_name"
+                            [ngClass]="{ 'is-invalid': submitted&&f.first_name.errors}">
+                        <div *ngIf="submitted&&f.first_name.errors" class="invalid-feedback">
+                            <div>first Name is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label" for="name">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" formControlName="last_name"
+                            [ngClass]="{ 'is-invalid': submitted&&f.last_name.errors}">
+                        <div *ngIf="submitted&&f.last_name.errors" class="invalid-feedback">
+                            <div>Last Name is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label" for="name">Email</label>
+                        <input type="text" class="form-control" id="email_id" formControlName="email_id"
+                        placeholder="name@****.com" pattern=".+@globex\.com" size="30" required
+                            [ngClass]="{ 'is-invalid': submitted&&f.email_id.errors}">
+                        <div *ngIf="submitted&&f.email_id.errors" class="invalid-feedback">
+                            <div>Email id is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="required label" for="name" >Dirth Of Birth</label>
+                        <input type="text" class="form-control" id="dob" formControlName="dob"
+                        placeholder="MM/DD/YYYY" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" required
+                            [ngClass]="{ 'is-invalid': submitted&&f.dob.errors}">
+                        <div *ngIf="submitted&&f.dob.errors" class="invalid-feedback">
+                            <div>Date of Birth is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label" for="name">Mobile Number1</label>
+                        <input type="tel" class="form-control" id="mobilenumber1" formControlName="mobilenumber1" 
+                        placeholder="12345 *****" pattern="[0-9]{5} [0-9]{5}" required
+                            [ngClass]="{ 'is-invalid': submitted&&f.mobilenumber1.errors}">
+                        <div *ngIf="submitted&&f.mobilenumber1.errors" class="invalid-feedback">
+                            <div>Mobile number1 is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label" for="name">Mobile Number2</label>
+                        <input type="tel" class="form-control" id="mobilenumber2" formControlName="mobilenumber2"
+                        placeholder="12345 *****" pattern="[0-9]{5} [0-9]{5}" required
+                            [ngClass]="{ 'is-invalid': submitted&&f.mobilenumber2.errors}">
+                        <div *ngIf="submitted&&f.mobilenumber2.errors" class="invalid-feedback">
+                            <div>Mobile number2 is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="required label" for="name">Gender</label>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3">Other</label>
+                        </div>
+                    </div>  
+                    <div class="col">
+                        <label class="required label" for="name">Checker user1</label>
+                        <input type="text" class="form-control" id="checker_user1" formControlName="checker_user1"
+                            [ngClass]="{ 'is-invalid': submitted&&f.checker_user1.errors}">
+                        <div *ngIf="submitted&&f.checker_user1.errors" class="invalid-feedback">
+                            <div>Checker user1 is required</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label class="required label" for="name">Checker user2</label>
+                        <input type="text" class="form-control" id="checker_user2" formControlName="checker_user2"
+                            [ngClass]="{ 'is-invalid': submitted&&f.checker_user2.errors}">
+                        <div *ngIf="submitted&&f.checker_user2.errors" class="invalid-feedback">
+                            <div>Checker user2 is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4 mb-5">
+                    <button type="button" class="btn btn-success" (click)="onSubmit()">Create</button>
+                        <button type="button" class="ml-3 btn btn-danger" (click)="onReset()">Reset</button>
+                    <!-- <button type="button" class="ml-3 btn btn-primary" (click)="viewuserrole()">Back</button> -->
+              
+                </div>
+
+
+            
+
+
+
+
+
+                <!-- <div class="text-center">
+                <button type="button" class="btn btn-success" (click)="onSubmit($event)">Create</button>
+                    <button type="button" class="ml-3 btn btn-danger" (click)="onReset()">Reset</button>
+                <button type="button" class="ml-3 btn btn-primary" (click)="viewEmployeeRole()">Back</button>
+        
+                </div> -->
+            </div>
+        </form>
+    </div>
+    
+    <!-- <footer>
+        <div class="card-footer">
+            <label for="remarks">Remarks</label>
+          <input type="remarks" class="form-control" id="remarks" placeholder="Enter remarks" name="remarks">
+        </div>
+        <label for="recorddetails">RecordDetails</label>
+       
+       
+        <form class="form-inline">
+            <div class="row">
+                <div class="col-3">
+                    <label for="maker">Maker:</label>
+                    <input type="maker" class="form-control" id="maker" name="maker">
+                </div>
+                <div class="col-2">
+                    <label for="checker">Checker:</label>
+                    <input type="checker" class="form-control" id="checker" name="checker">
+                </div>
+                <div class="col-2">
+                    <label for="last_mint_date">Last mint date:</label>
+                    <input type="last_mint_date" class="form-control" id="last_mint_date" name="last_mint_date">
+                </div>
+                <div class="col-2">
+                    <label for="last_mint_action">Last mint Action:</label>
+                    <input type="last_mint_action" class="form-control" id="last_mint_action" name="last_mint_action">
+                </div>
+                <div class="col-3">
+                    <label class="required label" for="name">Autorized</label>
+                
+                    <div class="form-check-inline">
+                      <label class="form-check-label" for="radio1">
+                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Yes
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label" for="radio2">
+                        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">No
+                      </label>
+                    </div>
+                </div>
+            </div>   
+        </form>
+           
+            
+
+                
+            
+       
+    </footer> -->
+
+    <footer class="footer-fixed-bottom-wrap mt-5">
+		
+		<div class="footer-fixed-bottom">
+            <form class="form-inline" action="/action_page.php">
+                <label for="remark">Remark:</label><br>
+                <input type="text" id="remark" name="remark">  
+            </form><br>
+        </div>
+		<div class="footer-fixed-bottom">
+            <form class="form-inline" action="/action_page.php">
+                <label for="maker">Maker:</label><br>
+                <input type="text" id="maker" name="maker"> 
+                <label for="checker">Checker:</label><br>
+                <input type="text" id="checker" name="checker"> 
+                <label for="maker_date">Maker date:</label><br>
+                <input type="text" id="maker_date" name="maker_date"> 
+                <label for="checker_date">Checker date:</label><br>
+                <input type="text" id="checker_date" name="checker_date">  
+                <label for="autorized">Autorized:</label><br>
+                <div class="form-check-inline">
+                    <label class="form-check-label" for="radio1">
+                      <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Yes
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label" for="radio2">
+                      <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">No
+                    </label>
+                  </div>
+
+            </form>	 	
+        </div>
+		
+	</footer>
+
+</div>
